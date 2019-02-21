@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MvvmCross.ViewModels;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Weibo.Forms
+namespace EsMo.Weibo.UI
 {
     public partial class App : Application
     {
@@ -11,7 +12,7 @@ namespace Weibo.Forms
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new LoginPage();
         }
 
         protected override void OnStart()

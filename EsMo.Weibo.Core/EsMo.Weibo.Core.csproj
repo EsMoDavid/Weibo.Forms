@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Img\avatar_enterprise_vip.png" />
+    <None Remove="Assets\Img\avatar_grassroot.png" />
+    <None Remove="Assets\Img\avatar_vip.png" />
+    <None Remove="Assets\Img\bg_banner_dialog.jpg" />
+    <None Remove="Assets\Img\ic_arrow_down_light.png" />
+    <None Remove="Assets\Img\ic_drawer_at.png" />
+    <None Remove="Assets\Img\ic_question_answer_grey600_24dp.png" />
+    <None Remove="Assets\Img\ic_view_day_grey600_24dp.png" />
+    <None Remove="Assets\Img\login_user_unknown.png" />
+    <None Remove="Assets\Img\timeline_icon_comment.png" />
+    <None Remove="Assets\Img\timeline_icon_like.png" />
+    <None Remove="Assets\Img\timeline_icon_redirect.png" />
+    <None Remove="Assets\Img\timeline_icon_unlike.png" />
+    <None Remove="Assets\Img\timeline_loading.png" />
+    <None Remove="Assets\JS\oauth.js" />
+    <None Remove="Assets\XML\actions.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Img\avatar_enterprise_vip.png" />
+    <EmbeddedResource Include="Assets\Img\avatar_grassroot.png" />
+    <EmbeddedResource Include="Assets\Img\avatar_vip.png" />
+    <EmbeddedResource Include="Assets\Img\bg_banner_dialog.jpg" />
+    <EmbeddedResource Include="Assets\Img\ic_arrow_down_light.png" />
+    <EmbeddedResource Include="Assets\Img\ic_drawer_at.png" />
+    <EmbeddedResource Include="Assets\Img\ic_question_answer_grey600_24dp.png" />
+    <EmbeddedResource Include="Assets\Img\ic_view_day_grey600_24dp.png" />
+    <EmbeddedResource Include="Assets\Img\login_user_unknown.png" />
+    <EmbeddedResource Include="Assets\Img\timeline_icon_comment.png" />
+    <EmbeddedResource Include="Assets\Img\timeline_icon_like.png" />
+    <EmbeddedResource Include="Assets\Img\timeline_icon_redirect.png" />
+    <EmbeddedResource Include="Assets\Img\timeline_icon_unlike.png" />
+    <EmbeddedResource Include="Assets\Img\timeline_loading.png" />
+    <EmbeddedResource Include="Assets\JS\oauth.js" />
+    <EmbeddedResource Include="Assets\XML\actions.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.8.14" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="C:\m\MvvmCross.Forms\MvvmCross.Forms.csproj" />
+    <ProjectReference Include="C:\m\MvvmCross\MvvmCross.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\AppResources.zh-Hans.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

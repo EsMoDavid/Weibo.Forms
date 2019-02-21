@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--<views:MvxViewCell x:TypeArguments="viewModels:TimelineItemViewModel"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:EsMo.Weibo.Core.ViewModels;assembly=EsMo.Weibo.Core"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             x:Class="EsMo.Weibo.UI.Pages.Timeline.TimelineItemView">-->
+
+<Grid Padding="10"  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:EsMo.Weibo.Core.ViewModels;assembly=EsMo.Weibo.Core"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             x:Class="EsMo.Weibo.UI.Pages.Timeline.TimelineItemView">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid VerticalOptions="Start" HorizontalOptions="Fill" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+          
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image x:Name="Profile" Grid.RowSpan="2" WidthRequest="42" HeightRequest="42" Source="{Binding ProfileUrl}"></Image>
+            <StackLayout  Grid.Column="1" Orientation="Horizontal">
+                <Label Text="{Binding Name}" FontSize="16" VerticalOptions="Center" TextColor="Black" x:Name="LabelName" Margin="4,0,0,0"  />
+                <Image x:Name="ImgVerified"  Source="{Binding ImageVerified}" VerticalOptions="Center"
+                       WidthRequest="18" HeightRequest="18"/>
+            </StackLayout>
+            <Label Text="{Binding Description}" VerticalOptions="Start" Margin="4,0,0,0" FontSize="14" TextColor="#69000000" Grid.Row="1" Grid.Column="1" />
+        </Grid>
+        <Label x:Name="LabelContent" Grid.Row="1" HorizontalOptions="Fill" Margin="0,10,0,0" Text="{Binding Text}" Style="{StaticResource TextBody}" ></Label>
+        <StackLayout Padding="10,0" Grid.Row="2" IsVisible="{Binding HasRetweetedStatus}">
+            <BoxView x:Name="BoxDivider" HeightRequest="1.5" HorizontalOptions="Fill" Margin="0,0,0,2" />
+            <Label x:Name="LabelReply" Text="{Binding RetweetContent}" HorizontalOptions="Fill" Style="{StaticResource TextBody}"/>
+        </StackLayout>
+        <FlexLayout Wrap="Wrap" JustifyContent="Start" Grid.Row="3" >
+            <FlexLayout.Resources>
+                <Style x:Key="ImageModel" TargetType="Image">
+                    <Setter Property="Margin">2</Setter>
+                </Style>
+            </FlexLayout.Resources>
+            <Image Style="{StaticResource ImageModel}"  Aspect="AspectFit"
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=0}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=0}" />
+            <Image Style="{StaticResource ImageModel}"
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=1}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=1}" />
+            <Image Style="{StaticResource ImageModel}"
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=2}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=2}" />
+            <Image Style="{StaticResource ImageModel}"
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=3}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=3}" />
+            <Image Style="{StaticResource ImageModel}"
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=4}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=4}" />
+            <Image Style="{StaticResource ImageModel}"
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=5}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=5}" />
+            <Image 
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=6}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=6}" />
+            <Image Style="{StaticResource ImageModel}"
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=7}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=7}" />
+            <Image  Style="{StaticResource ImageModel}"
+                Source="{Binding ImageModels,Converter={StaticResource ModelToUrl},ConverterParameter=8}"
+                IsVisible="{Binding ImageModels, Converter={StaticResource ModelVisibile}, ConverterParameter=8}" />
+        </FlexLayout>
+        <Grid Grid.Row="4">
+            <StackLayout Orientation="Horizontal">
+                <Image WidthRequest="24" HeightRequest="24" Source="{Binding ImageLike}" />
+                <Label Text="{Binding LikeCount}" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                <Image WidthRequest="24" HeightRequest="24" Source="{Binding ImageComment}" />
+                <Label Text="{Binding CommentCount}" VerticalOptions="Center" />
+                <Image WidthRequest="24" HeightRequest="24" Source="{Binding ImageRepost}" />
+                <Label Text="{Binding RepostCount}" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+<!--</views:MvxViewCell>-->

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:TimelineViewModel" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:EsMo.Weibo.Core.ViewModels;assembly=EsMo.Weibo.Core"
+             xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+             xmlns:sf="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:ui="clr-namespace:EsMo.Weibo.UI;assembly=EsMo.Weibo.UI"
+             x:Class="EsMo.Weibo.UI.Pages.Timeline.TimelinePage">
+        <Grid>
+            <!--<ListView x:Name="listView" VerticalOptions="Fill"
+                               CachingStrategy="RecycleElement"
+                               ItemTemplate="{StaticResource TimelineItemTemplate}"
+                               ItemsSource="{Binding TimelineItems}"
+                               >
+            </ListView>-->
+        <sf:SfListView x:Name="listView" AutoFitMode="Height" ItemSize="400"
+                           ItemTemplate="{StaticResource TimelineItemTemplate}"
+                           ItemsSource="{Binding TimelineItems}"
+                           ></sf:SfListView>
+        </Grid>
+</views:MvxContentPage>

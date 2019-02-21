@@ -1,8 +1,8 @@
-﻿<Application
-    x:Class="Weibo.Forms.UWP.App"
+﻿<local:UWPApplication
+    x:Class="EsMo.Weibo.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Weibo.Forms.UWP"
+    xmlns:local="using:EsMo.Weibo.UWP"
     RequestedTheme="Light">
 
-</Application>
+</local:UWPApplication>

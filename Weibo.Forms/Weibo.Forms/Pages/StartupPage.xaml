@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:MvxContentPage x:TypeArguments="viewModels:StartupViewModel"
+            xmlns:viewModels="clr-namespace:EsMo.Weibo.Core.ViewModels;assembly=EsMo.Weibo.Core"
+            xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:itelc="clr-namespace:ITLec.XamarinForms.Tool.AdvancedProgressBar;assembly=ITLec.XamarinForms.Tool.AdvancedProgressBar"
+             x:Class="EsMo.Weibo.UI.Pages.StartupPage">
+    <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
+        <Image Source="{Binding ProfileUrl}" />
+        <Label Text="{Binding StatusText}"    />
+        <ActivityIndicator x:Name="progressBar" />
+    </StackLayout>
+</views:MvxContentPage>
